@@ -1,4 +1,4 @@
-//Write a program to calculate the and display using callback functions
+//Write a program to calculate the sum and display using callback functions
 function display(num)
 {
     console.log(num);
