@@ -1,3 +1,4 @@
+//Understanding the syntax of promises
 let promise = new Promise(function(resolve, reject) {
     let success = true;
     if (success) {
@@ -6,10 +7,3 @@ let promise = new Promise(function(resolve, reject) {
         reject("Operation failed!");
     }
 });
-promise
-    .then(function(result) {
-        console.log("Success:", result);
-    })
-    .catch(function(error) {
-        console.log("Error:", error);
-    });
