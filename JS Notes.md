@@ -41,7 +41,7 @@ const afterTime = new Date().getTime();
 console.log(afterTime - beforeTime);
 ```
 
-- `JSON.parse(<string>)`: converts string to an object (NOTE: The keys of the object should also be written in double quotes specifically and additionally
+- `JSON.parse(<string>)`: converts string to an object (NOTE: The keys of the object must be enclosed in double quotes; otherwise, it will throw a SyntaxError. Additionally, values can be strings, numbers, booleans, arrays, objects, or null, but they must follow proper JSON formatting)
 - `JSON.stringify(<obj>)`: converts object to string
 
 ## Asynchronous Functions
