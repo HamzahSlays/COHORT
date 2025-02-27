@@ -40,12 +40,6 @@ const afterTime = new Date().getTime();
 
 console.log(afterTime - beforeTime);
 ```
-The keys are:
-```
-"name"
-"age"
-"city"
-```
 
 - `JSON.parse(<string>)`: converts string to an object (NOTE: The keys of the object must be enclosed in double quotes; otherwise, it will throw a SyntaxError. Additionally, values can be strings, numbers, booleans, arrays, objects, or null, but they must follow proper JSON formatting). Let's take an example
 ```javascript
@@ -56,6 +50,12 @@ const ob = JSON.parse(jsonString);
 console.log(ob.name); // Output: Alice
 console.log(ob.age);  // Output: 25
 console.log(ob.city); // Output: New York
+```
+The keys are:
+```
+"name"
+"age"
+"city"
 ```
 
 - `JSON.stringify(<obj>)`: converts object to string (just the reverse of `JSON.parse(<string>)`). Example:
