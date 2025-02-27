@@ -41,8 +41,26 @@ const afterTime = new Date().getTime();
 console.log(afterTime - beforeTime);
 ```
 
-- `JSON.parse(<string>)`: converts string to an object (NOTE: The keys of the object must be enclosed in double quotes; otherwise, it will throw a SyntaxError. Additionally, values can be strings, numbers, booleans, arrays, objects, or null, but they must follow proper JSON formatting)
-- `JSON.stringify(<obj>)`: converts object to string
+- `JSON.parse(<string>)`: converts string to an object (NOTE: The keys of the object must be enclosed in double quotes; otherwise, it will throw a SyntaxError. Additionally, values can be strings, numbers, booleans, arrays, objects, or null, but they must follow proper JSON formatting). Let's take an example
+```javascript
+const jsonString = '{"name": "Alice", "age": 25, "city": "New York"}';
+
+const ob = JSON.parse(jsonString);
+
+console.log(ob.name); // Output: Alice
+console.log(ob.age);  // Output: 25
+console.log(ob.city); // Output: New York
+```
+
+- `JSON.stringify(<obj>)`: converts object to string (just the reverse of `JSON.parse(<string>)`). Example:
+```javascript
+const person = { name: "Alice", age: 25, city: "New York" };
+
+const jsonString = JSON.stringify(person);
+
+console.log(jsonString);
+// Output: '{"name":"Alice","age":25,"city":"New York"}'
+```
 
 ## Asynchronous Functions
 Those functions that allow a program to start a potentially long running operation and continue executing other tasks without waiting for that operation to complete. This is particularly important in environments like web browsers or Node.js where waiting for an operation to finish (like fetching a data from a server or reading a large file) could make the application unresponsive. Two important such functions are:
