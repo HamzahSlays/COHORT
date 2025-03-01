@@ -1,1 +1,1 @@
-# COHORT
+All about JavaScript.
