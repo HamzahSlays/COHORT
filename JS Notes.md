@@ -98,36 +98,15 @@ processData("hello", displayData);
 
 This differs from typical function calls in languages like Java, where functions are usually invoked directly within another function's block rather than passed as arguments.
 
-**For example:**
+*Async Functions also uses callbacks:**
 
 **JavaScript (using a callback):**
 ```javascript
-function fetchData(callback) {
-    // Simulate fetching data
-    setTimeout(() => {
-        const data = "Data fetched!";
-        callback(data);
-    }, 1000);
+function showMessage() {
+    console.log("This message is shown after 2 seconds!");
 }
 
-fetchData((result) => {
-    console.log(result);
-});
-```
-
-**Java (direct function call):**
-```java
-public class Main {
-    public void fetchData() {
-        // Fetch data directly
-        String data = "Data fetched!";
-        displayData(data);
-    }
-    
-    public void displayData(String data) {
-        System.out.println(data);
-    }
-}
+setTimeout(showMessage, 2000);
 ```
 
 If we connect the dots we see, setTimeout() and setInterval() are also a showcase of the use of callback functions. Since when we use either of the functions we call the function refernce basically the function which we are calling is being passed as an argument inside the setTimeout() or setInterval() functions.
