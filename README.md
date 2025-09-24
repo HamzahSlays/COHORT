@@ -1,1 +1,1 @@
-All about JavaScript.
+Documenting my Full-Stack journey

@@ -428,17 +428,48 @@ let promise = new Promise (function (resolve, reject){
 });
 ```
 
-resolve and reject are two callbacks provided by JavaScript itself:
-- resolve(value): If the job is finished successfully
-- reject(error): If the job fails
+Promise is a built-in JavaScript class that enables the handling of asynchronous operations.
 
-The promise object returned by the new Promise constructor has the 'state' and 'result' property.
+We use new Promise(...) to create a new Promise object.
 
-'state': Initially pending then changes to either "fulfilled" when resolve is called or "rejected" when reject is called
+This object (promise) then has access to all the standard methods provided by the Promise API — such as:
 
-'result': Initially undefined, then changes to the value if resolved or changes to error when rejected.
+**.then()** for success handling
 
-Let's take an example:
+**.catch()** for error handling
+
+**.finally()** for cleanup logic
+
+Once created, the object can be used as:
+
+```javascript
+promise
+  .then(data => { /* handle success */ })
+  .catch(error => { /* handle error */ });
+```
+**The Special Case of Promise: Executor Function**
+Unlike most classes, the Promise constructor expects a function as its argument. This is called the executor function, and it is immediately invoked when the Promise is created. The executor receives two parameters: resolve and reject.
+
+resolve: used to indicate successful completion
+
+reject: used to indicate failure
+
+This behavior makes Promise a special case in JavaScript, where object creation involves actively defining the behavior of that object at the time of instantiation.
+
+Example:
+```javascript
+const promise = new Promise((resolve, reject) => {
+    const success = true;
+
+    if (success) {
+        resolve("Task completed!");
+    } else {
+        reject("Task failed.");
+    }
+});
+```
+
+Let's take a proper example to understand the proper working of Promises:
 ```javascript
 setTimeout(() => {
     console.log("Hello Four");

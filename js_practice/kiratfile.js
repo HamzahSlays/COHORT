@@ -9,5 +9,4 @@ function kiratsReadFile(cb) {
 function onDone(data) {
     console.log(data);
 }
-
 kiratsReadFile(onDone);
